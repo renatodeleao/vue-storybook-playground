@@ -2,10 +2,26 @@ import { addParameters, addDecorator } from '@storybook/vue';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withA11y } from '@storybook/addon-a11y';
+import { withWrapper } from "./wrapper.vue";
 
 addDecorator(withA11y)
+addDecorator(withWrapper)
 
 addParameters({
+  notes: {
+    // will make tabs
+    intro: `
+      #Default notes you should add notes here
+
+      yes it support **markdown**  *tool*, and this could be an external file
+    `,
+    section: `
+      another Section
+
+      <Giphy query='cheese' />
+
+    `
+  },
   options: {
     /**
      * display the top-level grouping as a "root" in the sidebar
