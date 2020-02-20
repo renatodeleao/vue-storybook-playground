@@ -2,7 +2,11 @@ import { addParameters, addDecorator } from '@storybook/vue';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withA11y } from '@storybook/addon-a11y';
-import { withWrapper } from "./wrapper.vue";
+// you can import global styles resets or frameworks into the preview
+import "../src/assets/global.css";
+
+// doens't work, breaks loading
+import withWrapper from "./wrapper";
 
 addDecorator(withA11y)
 addDecorator(withWrapper)

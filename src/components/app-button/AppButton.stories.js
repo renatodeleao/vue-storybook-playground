@@ -11,27 +11,10 @@ export default {
   title: "UI/Components/Button/Base", // using slashes creates the folder structure
   component: AppButtonBase,
   decorators: [
-    // () => ({
-    //   template: `<div :style="{ background: 'red' }"><story/></div>` // wrap all stories of this component into this markup
-    // }),
     withKnobs
   ],
   parameters: {
     componentSubtitle: "Your button for all your needs",
-    notes: {
-      // will make tabs
-      intro: `
-        #Default notes you should add notes here
-
-        yes it support **markdown**  *tool*, and this could be an external file
-      `,
-      section: `
-        another Section
-
-        <Giphy query='cheese' />
-
-      `
-    }
   },
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/
